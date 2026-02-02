@@ -1,16 +1,14 @@
 package br.com.fidesdiaria.domain.model;
 
 public class User {
+	private Long id;
 	private String name;
 	private String password;
-	private Long id;
-	private Level level;
 
 	public User(String name, String password) {
 		this.name = name;
 		this.password =  password;
 		this.id = null;
-		this.level = new Level();
 	}
 	
 	public String getName() {
@@ -19,10 +17,6 @@ public class User {
 
 	public String getPassword() {
 		return this.password;
-	}
-	
-	public Level getLevel() {
-		return this.level;
 	}
 	
 	public void setPassword(String password) {
