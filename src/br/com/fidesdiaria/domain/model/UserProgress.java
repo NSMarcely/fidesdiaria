@@ -1,11 +1,9 @@
 package br.com.fidesdiaria.domain.model;
 
 public class UserProgress {
-	private Long userId;
 	private int score;
 	
-	public UserProgress(Long userId) {
-		this.userId = userId;
+	public UserProgress() {
 		this.score = 0;
 	}
 	
@@ -31,10 +29,6 @@ public class UserProgress {
 	 
 	 public void setScore(int score) {
 		 this.score = score;
-	 }
-	 
-	 public Long getUserId() {
-		 return this.userId;
 	 }
 	
 }

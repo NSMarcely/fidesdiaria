@@ -4,11 +4,13 @@ public class User {
 	private Long id;
 	private String name;
 	private String password;
+	private UserProgress progress;
 
 	public User(String name, String password) {
 		this.name = name;
 		this.password =  password;
 		this.id = null;
+		this.progress = new UserProgress();
 	}
 	
 	public String getName() {
@@ -29,6 +31,10 @@ public class User {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public UserProgress getProgress() {
+		return progress;
 	}
 	
 }
