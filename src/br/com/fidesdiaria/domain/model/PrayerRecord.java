@@ -3,25 +3,26 @@ import java.time.LocalDate;
 
 public class PrayerRecord {
 	private Long userId;
-	private Long prayerId;
+	private Prayer type;
 	private LocalDate fulfillment;
 	
-	public PrayerRecord(Long userId, Long prayerId) {
+	public PrayerRecord(Long userId, Prayer type) {
 		this.userId = userId;
-		this.prayerId = prayerId;
+		this.type = type;
 		this.fulfillment = LocalDate.now();
 	}
 
+	
 	public Long getUserId() {
-		return userId;
+		return this.userId;
 	}
 
-	public Long getPrayerId() {
-		return prayerId;
+	public Prayer getType() {
+		return this.type;
 	}
 
 	public LocalDate getFulfillment() {
-		return fulfillment;
+		return this.fulfillment;
 	}
 	
 }

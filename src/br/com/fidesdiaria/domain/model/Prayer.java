@@ -1,26 +1,31 @@
 package br.com.fidesdiaria.domain.model;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-public class Prayer {
-	private Long id;
-	private String type;
+
+public enum Prayer {
 	
-	public Prayer(String type) {
-		this.type = type;
-		this.id = null;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getType() {
-		return type;
+	MORNING("Manhã"),
+	NIGHT("Noite"),
+	AFTERNOON("Tarde"),
+	MARIAN_ROSARY("Terço Mariano"),
+	DIVINE_MERCY("Terço da Divina Misericórdia");
+	
+	private String prayerName;
+	
+	private Prayer(String prayerName) {
+		this.prayerName = prayerName;
 	}
 	
+	public static List<String> returnAllPrayerType() {
+		return Arrays.stream(values())
+				.map(Prayer::getPrayerName)
+				.collect(Collectors.toList());
+	}
 	
+	public String getPrayerName() {
+		return this.prayerName;
+	}
 
 }

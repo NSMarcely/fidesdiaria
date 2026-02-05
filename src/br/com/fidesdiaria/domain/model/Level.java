@@ -28,6 +28,7 @@ public enum Level {
 		throw new IllegalArgumentException("Erro: pontos invalidos" + userScore);
 	}
 	
+	
 	public String getDescription() {
 		return this.description;
 	}
