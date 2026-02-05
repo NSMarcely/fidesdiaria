@@ -11,7 +11,6 @@ public class PrayerRecord {
 		this.type = type;
 		this.fulfillment = LocalDate.now();
 	}
-
 	
 	public Long getUserId() {
 		return this.userId;
