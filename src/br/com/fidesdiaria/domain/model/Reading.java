@@ -2,24 +2,22 @@ package br.com.fidesdiaria.domain.model;
 import java.time.LocalDate;
 
 public class Reading {
+	Long userId;
 	String verse;
 	String reflection;
-	Long id;
+	Long readingId;
 	LocalDate fulfillment;
 	
-	public Reading (String verse, String reflection) {
+	public Reading (Long userId, String verse, String reflection) {
+		this.userId = userId;
 		this.verse = verse;
 		this.reflection = reflection;
-		this.id = null;
+		this.readingId = null;
 		this.fulfillment = LocalDate.now();
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
+	public Long getUserId() {
+		return this.userId;
 	}
 
 	public LocalDate getFulfillment() {
@@ -33,7 +31,15 @@ public class Reading {
 	public String getVerse() {
 		return verse;
 	}
-
+	
+	public Long getReadingId() {
+		return this.readingId;
+	}
+	
+	public void setReadingId(Long readingId) {
+		this.readingId = readingId;
+	}
+	
 	public String getReflection() {
 		return reflection;
 	}
