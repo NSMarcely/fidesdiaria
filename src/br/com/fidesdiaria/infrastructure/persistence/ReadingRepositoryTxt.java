@@ -21,4 +21,5 @@ public class ReadingRepositoryTxt implements ReadingRepository {
 	public List<Reading> findAll(){
 		return new ArrayList<>(this.readings.values());
 	}
+	
 }

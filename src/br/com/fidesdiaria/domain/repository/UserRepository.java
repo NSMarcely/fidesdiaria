@@ -10,4 +10,6 @@ public interface UserRepository {
 	Optional<User> findById(Long id);
 	
 	List<User> findAll();
+	
+	void updateProgress(Long userId, int score);
 }
