@@ -1,6 +1,5 @@
 package br.com.fidesdiaria.infrastructure.persistence;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -8,7 +7,11 @@ import br.com.fidesdiaria.domain.model.User;
 import br.com.fidesdiaria.domain.repository.UserRepository;
 
 public class UserRepositoryTxt implements UserRepository {
-	private final Map<Long,User> users = new HashMap<>();
+	private final Map<Long, User> users;
+	
+	public UserRepositoryTxt(Map<Long, User> users) {
+		this.users= users;
+	}
 	
 	@Override
 	public void createUser(User user) {
