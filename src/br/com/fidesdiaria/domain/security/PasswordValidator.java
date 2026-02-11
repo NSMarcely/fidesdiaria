@@ -1,9 +1,11 @@
 package br.com.fidesdiaria.domain.security;
 
+import br.com.fidesdiaria.domain.exception.InvalidPasswordException;
+
 public class PasswordValidator {
-	public static boolean isValid(String password) {
-		if(password.length() < 8) {
-			return false;
+	public static void valite(String password) {
+		if(password == null || password.length() < 8) {
+			throw new InvalidPasswordException("A senha deve conter no mínimo 8 carácteres.");
 		}
 		int upperCaseCount = 0;
 		int digitCount = 0;
@@ -15,6 +17,11 @@ public class PasswordValidator {
 				digitCount += 1;
 			}
 		}
-		return upperCaseCount > 0 && digitCount > 0;
+		if(upperCaseCount == 0) {
+			throw new InvalidPasswordException("A senha deve conter ao menos um carácter maiúsculo.");
+		}
+		if(digitCount == 0) {
+			throw new InvalidPasswordException("A senha deve conter ao menos um número");
+		}
 	}
 }
