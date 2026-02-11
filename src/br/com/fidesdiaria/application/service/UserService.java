@@ -1,4 +1,5 @@
 package br.com.fidesdiaria.application.service;
+import br.com.fidesdiaria.domain.exception.InvalidAuthenticationException;
 import br.com.fidesdiaria.domain.model.User;
 import br.com.fidesdiaria.domain.repository.UserRepository;
 import br.com.fidesdiaria.domain.security.PasswordValidator;
@@ -20,10 +21,10 @@ public class UserService {
 		User searchUser = this.userRepository.findAll().stream()
 		.filter(user -> user.getName().equals(name))
 		.findFirst()
-		.orElseThrow(() -> new RuntimeException("Nome do usário não foi encontrado."));
+		.orElseThrow(() -> new InvalidAuthenticationException("Nome do usário não foi encontrado."));
 		
 		if(!searchUser.getPassword().equals(password)) {
-			throw new RuntimeException("Senha incorreta.");
+			throw new InvalidAuthenticationException("Senha incorreta.");
 		}
 		System.out.println("Bem-vindo(a)" + searchUser.getName());
 	}
