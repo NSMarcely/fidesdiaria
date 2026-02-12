@@ -15,7 +15,13 @@ public class Reading {
 		this.readingId = null;
 		this.fulfillment = LocalDate.now();
 	}
-
+	
+	public String toString() {
+		return String.format("\nVersículo: %s"
+				+ "\nReflexão: %s"
+				+ "\nData: %d", this.verse, this.reflection, this.fulfillment);
+	}
+	
 	public Long getUserId() {
 		return this.userId;
 	}
