@@ -13,4 +13,10 @@ public class ReadingService {
 		Reading newReading = new Reading(userId, verse, reflection);
 		this.readingRepository.createReading(newReading);
 	}
+	
+	public void readingHistory(Long userId) {
+		this.readingRepository.findAll().stream()
+		.filter(reading -> reading.getUserId().equals(userId))
+		.forEach(reading -> System.out.println(reading));
+	}
 }
