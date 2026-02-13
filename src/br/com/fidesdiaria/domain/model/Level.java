@@ -1,13 +1,11 @@
 package br.com.fidesdiaria.domain.model;
 
 public enum Level {
-	INICIANTE("Iniciante", 0, 10),
-	CONSTANTE("Constante", 11, 25),
-	PERSEVERANTE("", 26, 48),
-	FIDEL("Fidel", 49, 70),
-	DEVOTO("Devoto", 71, 100),
-	CONFIANTE("Confiante", 101, 150),
-	FIRME_NA_FE("Firme na fé", 151, 200);
+	BEGINNER("Iniciante", 0, 10),
+	CONSTANT("Constante", 11, 25),
+	PERSEVERANT("Perseverante", 26, 70),
+	DEVOTED("Devoto", 71, 150),
+	STEADFAST_IN_FAITH("Firme na fé", 151, 200);
 	
 	private final String description;
 	private final int minScore;
