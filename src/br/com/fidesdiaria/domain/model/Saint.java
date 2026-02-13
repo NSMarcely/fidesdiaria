@@ -13,6 +13,10 @@ public class Saint {
 		this.id = null;
 	}
 	
+	public String toString() {
+		return String.format("Nome: %s", this.name);
+	}
+	
 	public Long getId() {
 		return this.id;
 	}
