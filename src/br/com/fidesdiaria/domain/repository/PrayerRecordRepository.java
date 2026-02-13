@@ -1,9 +1,9 @@
 package br.com.fidesdiaria.domain.repository;
 import java.util.List;
-import br.com.fidesdiaria.domain.model.Prayer;
+import br.com.fidesdiaria.domain.model.PrayerRecord;
 
 public interface PrayerRecordRepository {
-	void createPrayer(Prayer prayer);
+	void createPrayer(PrayerRecord prayerRecord);
 
-	List<Prayer> findAll();
+	List<PrayerRecord> findAll();
 }
