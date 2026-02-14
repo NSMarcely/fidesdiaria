@@ -5,12 +5,14 @@ public class User {
 	private String name;
 	private String password;
 	private UserProgress progress;
+	private UserType type;
 
 	public User(String name, String password) {
 		this.name = name;
 		this.password =  password;
 		this.id = null;
 		this.progress = new UserProgress();
+		this.type = UserType.COMMON;
 	}
 	
 	public String getName() {
@@ -37,4 +39,7 @@ public class User {
 		return progress;
 	}
 	
+	public UserType getType() {
+		return type;
+	}
 }
