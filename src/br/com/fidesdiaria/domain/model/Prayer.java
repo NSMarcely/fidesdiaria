@@ -24,6 +24,26 @@ public enum Prayer {
 				.collect(Collectors.toList());
 	}
 	
+	public static Prayer fromString(String input) {
+		String lowerInput = input.toLowerCase()
+		.replace(" ","")
+		.replace("ã", "a")
+		.replace("ó", "o")
+		.replace("ç", "c");
+		for(Prayer prayer : values()) {
+			String lowerPrayerName = prayer.getPrayerName().toLowerCase()
+			.replace(" ","")
+			.replace("ã", "a")
+			.replace("ó", "o")
+			.replace("ç", "c");
+			if(lowerPrayerName.equals(lowerInput)) {
+				return prayer;
+			}
+		}
+		throw new IllegalArgumentException("Não foi possivel indetificar a opição, tente: "
+		+ String.join(",", returnAllPrayerType()) );
+	}
+	
 	public String getPrayerName() {
 		return this.prayerName;
 	}
