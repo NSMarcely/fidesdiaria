@@ -2,6 +2,7 @@ package br.com.fidesdiaria.application.service;
 import br.com.fidesdiaria.domain.exception.InvalidAuthenticationException;
 import br.com.fidesdiaria.domain.model.User;
 import br.com.fidesdiaria.domain.repository.UserRepository;
+import br.com.fidesdiaria.domain.security.NameFormatter;
 import br.com.fidesdiaria.domain.security.PasswordValidator;
 
 public class UserService {
@@ -12,9 +13,11 @@ public class UserService {
 	}
 	
 	public void registerUser(String name, String password) {
+		String userName = NameFormatter.format(name);
 		PasswordValidator.valite(password);
-		User newUse = new User(name, password);
+		User newUse = new User(userName, password);
 		this.userRepository.createUser(newUse);
+		System.out.printf("\nO usuário %s foi registrado com sucesso", newUse.getName());
 	}
 	
 	public void loginUser(String name, String password) {
