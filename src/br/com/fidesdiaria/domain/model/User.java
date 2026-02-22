@@ -15,6 +15,19 @@ public class User {
 		this.type = UserType.COMMON;
 	}
 	
+	public String toString() {
+		return String.format("\nNome: %s, Nível: %s, ID: %d, tipo: %s"
+				, this.name, this.progress.getLevelDescription(), this.id, this.type);
+	}
+	
+	public String toUserView() {
+		return String.format("\nNome: %s"
+				+ "\nNível: %s (Pontos: %d)"
+				+ "\nID: %d"
+				+ "\nTipo: %s"
+				, this.name, this.progress.getLevelDescription(), this.progress.getScore(), this.id, this.type);
+	}
+	
 	public String getName() {
 		return this.name;
 	}
