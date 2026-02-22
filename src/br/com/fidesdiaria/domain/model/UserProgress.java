@@ -14,9 +14,9 @@ public class UserProgress {
 		this.score += ponts;
 	}
 	
-	public Level getLevel() {
+	public String getLevelDescription() {
 		 Level level = Level.returnLevel(this.score);
-		 return level;
+		 return level.getDescription();
 	}
 	
 	public String toString() {
