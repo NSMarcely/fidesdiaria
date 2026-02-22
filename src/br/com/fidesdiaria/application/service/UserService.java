@@ -31,4 +31,12 @@ public class UserService {
 		}
 		System.out.println("Bem-vindo(a)" + searchUser.getName());
 	}
+	
+	public void viewUserProfile(Long userId) {
+		User userFoud = this.userRepository
+				.findById(userId)
+				.orElseThrow(() -> new RuntimeException("Usuário não indentificado"));
+		System.out.println(userFoud.toUserView());
+	}
 }
+ 
