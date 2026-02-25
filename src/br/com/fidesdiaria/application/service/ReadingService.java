@@ -20,6 +20,7 @@ public class ReadingService {
 	}
 	
 	public void readingHistory(Long userId) {
+		System.out.println("|Histótico de Leituras Bíblicas|");
 		this.readingRepository.findAll().stream()
 		.filter(reading -> reading.getUserId().equals(userId))
 		.forEach(reading -> System.out.println(reading));
