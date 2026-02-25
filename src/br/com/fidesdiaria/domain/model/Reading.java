@@ -17,9 +17,10 @@ public class Reading {
 	}
 	
 	public String toString() {
-		return String.format("\nVersículo: %s"
+		return String.format("\nID: %s"
+				+ "\nVersículo: %s"
 				+ "\nReflexão: %s"
-				+ "\nData: %d", this.verse, this.reflection, this.fulfillment);
+				+ "\nData: %tD", this.readingId, this.verse, this.reflection, this.fulfillment);
 	}
 	
 	public Long getUserId() {
@@ -28,10 +29,6 @@ public class Reading {
 
 	public LocalDate getFulfillment() {
 		return fulfillment;
-	}
-
-	public void setFulfillment(LocalDate fulfillment) {
-		this.fulfillment = fulfillment;
 	}
 
 	public String getVerse() {
