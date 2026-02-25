@@ -17,10 +17,9 @@ public class UserService {
 		PasswordValidator.valite(password);
 		User newUse = new User(userName, password);
 		this.userRepository.createUser(newUse);
-		System.out.printf("\nO usuário %s foi registrado com sucesso", newUse.getName());
 	}
 	
-	public void loginUser(String name, String password) {
+	public User loginUser(String name, String password) {
 		User searchUser = this.userRepository.findAll().stream()
 		.filter(user -> user.getName().equals(name))
 		.findFirst()
@@ -29,7 +28,7 @@ public class UserService {
 		if(!searchUser.getPassword().equals(password)) {
 			throw new InvalidAuthenticationException("Senha incorreta.");
 		}
-		System.out.println("Bem-vindo(a)" + searchUser.getName());
+		return searchUser;
 	}
 	
 	public void viewUserProfile(Long userId) {

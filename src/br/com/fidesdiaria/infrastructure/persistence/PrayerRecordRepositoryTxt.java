@@ -14,7 +14,7 @@ public class PrayerRecordRepositoryTxt implements PrayerRecordRepository {
 	
 	@Override
 	public void createPrayer(PrayerRecord prayerRecord) {
-		
+		this.prayers.put(prayerRecord.getPrayerId(), prayerRecord);
 	}
 	
 	@Override

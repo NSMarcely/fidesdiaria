@@ -24,9 +24,9 @@ public class PrayerRecordService {
 	
 	public void viewTypesPrayer() {
 		List<String> prayers = Prayer.returnAllPrayerType();
-		System.out.println("___________________________________");
-		for(int i = 0; 1<=prayers.size(); i++) {
-			System.out.printf("\n%d- %s", i+ 1,  prayers.get(i));
+		System.out.println("_________Tipos disponível_________");
+		for(int i = 0; i<prayers.size(); i++) {
+			System.out.printf("\n%d- %s%n", i+ 1,  prayers.get(i));
 		}
 		System.out.println("___________________________________");
 	}
