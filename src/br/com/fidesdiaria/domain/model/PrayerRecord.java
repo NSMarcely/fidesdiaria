@@ -10,7 +10,7 @@ public class PrayerRecord {
 	public PrayerRecord(Long userId, Prayer type) {
 		this.userId = userId;
 		this.type = type;
-		this.PrayerId = null;
+		this.PrayerId = IdGenerator.PRAYER.nextId();
 		this.fulfillment = LocalDate.now();
 	}
 	

@@ -10,7 +10,7 @@ public class Saint {
 		this.name = name;
 		this.day = day;
 		this.month = month;
-		this.id = null;
+		this.id = IdGenerator.SAINT.nextId();
 	}
 	
 	public String toString() {

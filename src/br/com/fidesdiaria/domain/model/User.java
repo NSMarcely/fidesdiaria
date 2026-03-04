@@ -10,7 +10,7 @@ public class User {
 	public User(String name, String password) {
 		this.name = name;
 		this.password =  password;
-		this.id = null;
+		this.id = IdGenerator.USER.nextId();
 		this.progress = new UserProgress();
 		this.type = UserType.COMMON;
 	}
@@ -24,7 +24,7 @@ public class User {
 		return String.format("\nNome: %s"
 				+ "\nNível: %s (Pontos: %d)"
 				+ "\nID: %d"
-				+ "\nTipo: %s"
+				+ "\nTipo: %s%n"
 				, this.name, this.progress.getLevelDescription(), this.progress.getScore(), this.id, this.type);
 	}
 	

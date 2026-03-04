@@ -12,7 +12,7 @@ public class Reading {
 		this.userId = userId;
 		this.verse = verse;
 		this.reflection = reflection;
-		this.readingId = null;
+		this.readingId = IdGenerator.READING.nextId();
 		this.fulfillment = LocalDate.now();
 	}
 	
