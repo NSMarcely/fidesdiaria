@@ -12,6 +12,9 @@ public class NameFormatter {
 			String formatter = i.substring(0, 1).toUpperCase() + i.substring(1).toLowerCase();
 			newName.append(formatter).append(" ");
 		}
-		return arrayName.toString().trim();
+		return newName.toString().trim();
+	}
+	public static void main(String[] args) {
+		System.out.println(NameFormatter.format("Marcely"));
 	}
 }
