@@ -6,4 +6,8 @@ public interface SaintRepository {
 	void creatDaySaint(Saint saint);
 	
 	List<Saint> findAll();
+	
+	void read();
+	
+	void write();
 }

@@ -13,6 +13,7 @@ public class Saint {
 		this.id = IdGenerator.SAINT.nextId();
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("Nome: %s", this.name);
 	}

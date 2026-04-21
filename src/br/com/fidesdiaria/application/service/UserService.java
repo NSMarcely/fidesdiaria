@@ -17,6 +17,7 @@ public class UserService {
 		PasswordValidator.valite(password);
 		User newUse = new User(userName, password);
 		this.userRepository.createUser(newUse);
+		this.userRepository.write();
 	}
 	
 	public User loginUser(String name, String password) {

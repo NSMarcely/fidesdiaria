@@ -16,6 +16,7 @@ public class Reading {
 		this.fulfillment = LocalDate.now();
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("\nID: %s"
 				+ "\nVersículo: %s"

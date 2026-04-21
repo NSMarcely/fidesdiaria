@@ -20,6 +20,8 @@ public class PrayerRecordService {
 		PrayerRecord prayerRecord = new PrayerRecord(userid, prayerType);
 		this.prayerRecordRepository.createPrayer(prayerRecord);
 		this.userRepository.updateProgress(userid, score);
+		this.userRepository.write();
+		this.prayerRecordRepository.write();
 	}
 	
 	public void viewTypesPrayer() {

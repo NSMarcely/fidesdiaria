@@ -21,9 +21,10 @@ public class UserMenu {
 	
 	public void showCommonUserOptions(Long userId) {
 		System.out.println("::Menu::\n");
+		
 		this.saintService.findDaySaint();
 		this.userService.viewUserProfile(userId);
-		System.out.println("1 - Registrar oração."
+		System.out.println("1- Registrar oração."
 				+ "\n2- Registrar leitura bíblica."
 				+ "\n3- Ver histórico de oração."
 				+ "\n4- Ver histórico de leitura bíblica.");
@@ -40,6 +41,7 @@ public class UserMenu {
 			break;
 		
 		case 2: 
+			input.nextLine();
 			System.out.println("Versículo lido: ");
 			String verse = input.nextLine();
 			System.out.println("Reflexão: ");

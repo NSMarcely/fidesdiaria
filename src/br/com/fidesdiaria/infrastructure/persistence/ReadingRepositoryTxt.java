@@ -22,4 +22,13 @@ public class ReadingRepositoryTxt implements ReadingRepository {
 		return new ArrayList<>(this.readings.values());
 	}
 	
+	@Override
+	public void read() {
+		
+	}
+	
+	@Override
+	public void write() {
+		
+	}
 }

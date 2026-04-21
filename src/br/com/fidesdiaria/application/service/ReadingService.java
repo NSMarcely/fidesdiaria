@@ -17,6 +17,7 @@ public class ReadingService {
 		Reading newReading = new Reading(userId, verse, reflection);
 		this.readingRepository.createReading(newReading);
 		this.userRepository.updateProgress(userId, score);
+		this.userRepository.write();
 	}
 	
 	public void readingHistory(Long userId) {

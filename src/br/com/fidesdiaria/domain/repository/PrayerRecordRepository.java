@@ -6,4 +6,8 @@ public interface PrayerRecordRepository {
 	void createPrayer(PrayerRecord prayerRecord);
 
 	List<PrayerRecord> findAll();
+	
+	void read();
+	
+	void write();
 }

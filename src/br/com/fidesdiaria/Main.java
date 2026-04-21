@@ -45,6 +45,9 @@ public class Main {
 		AdminMenu adminMenu = new AdminMenu(userService, prayerRecordService, readingService, saintService, administratorService);
 		StartMenu startMenu = new StartMenu(userService, adminMenu, userMenu);
 			
+		userRepository.read();
+		prayerRecordRepository.read();
+		
 		startMenu.displayMainMenu();
 	}
 }

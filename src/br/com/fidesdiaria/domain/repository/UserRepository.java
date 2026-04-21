@@ -12,4 +12,8 @@ public interface UserRepository {
 	List<User> findAll();
 	
 	void updateProgress(Long userId, int score);
+	
+	void read();
+	
+	void write();
 }

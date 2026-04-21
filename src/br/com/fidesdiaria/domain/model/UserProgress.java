@@ -19,6 +19,7 @@ public class UserProgress {
 		 return level.getDescription();
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("Pontos:%d", this.score);
 	}

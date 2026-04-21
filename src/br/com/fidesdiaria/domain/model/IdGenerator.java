@@ -10,7 +10,7 @@ public enum IdGenerator {
 	private double limit = Math.pow(10, 9)-1;
 	
 	public Long nextId() {
-		if(accountant == limit){
+		if(accountant >= limit){
 			throw new IllegalStateException("O limite" + accountant + "/" + limit + "foi atingido.");
 		}
 		return accountant++;

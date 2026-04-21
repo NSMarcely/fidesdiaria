@@ -25,6 +25,7 @@ public class AdminMenu extends UserMenu{
 			System.out.println("5- Registrar Santo do Dia."
 					+ "\n6- Promover usuário a administrador"
 					+ "\n7- Sair.");
+			
 			System.out.println("Opção: ");
 			int option = input.nextInt();
 			input.nextLine();

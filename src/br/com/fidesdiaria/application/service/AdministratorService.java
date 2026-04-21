@@ -18,6 +18,7 @@ public class AdministratorService {
 			throw new RuntimeException("O usuário já é administrador.");
 		}
 		userFound.setType(UserType.ADMINISTRATOR);
+		this.userRepository.write();
 	}
 }
 

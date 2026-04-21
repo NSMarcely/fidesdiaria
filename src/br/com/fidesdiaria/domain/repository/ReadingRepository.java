@@ -6,4 +6,8 @@ public interface ReadingRepository {
 	void createReading(Reading reading);
 
 	List<Reading> findAll();
+	
+	void read();
+	
+	void write();
 }

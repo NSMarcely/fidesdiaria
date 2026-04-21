@@ -10,11 +10,12 @@ public class User {
 	public User(String name, String password) {
 		this.name = name;
 		this.password =  password;
-		this.id = IdGenerator.USER.nextId();
+		this.id = null;
 		this.progress = new UserProgress();
 		this.type = UserType.COMMON;
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("\nNome: %s, Nível: %s, ID: %d, tipo: %s"
 				, this.name, this.progress.getLevelDescription(), this.id, this.type);
@@ -25,7 +26,7 @@ public class User {
 				+ "\nNível: %s (Pontos: %d)"
 				+ "\nID: %d"
 				+ "\nTipo: %s%n"
-				, this.name, this.progress.getLevelDescription(), this.progress.getScore(), this.id, this.type);
+				, this.name, this.progress.getLevelDescription(), this.progress.getScore(), this.id, this.type.getDescription());
 	}
 	
 	public String getName() {

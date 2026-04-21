@@ -19,6 +19,7 @@ public class PrayerRecord {
 				+ "\nTipo: %s"
 				+ "\nData: %tD", this.PrayerId, this.type.getPrayerName(), this.fulfillment);
 	}
+	
 	public Long getUserId() {
 		return this.userId;
 	}
@@ -39,4 +40,7 @@ public class PrayerRecord {
 		return this.fulfillment;
 	}
 	
+	public void setFulfillment(LocalDate fulfillment) {
+		this.fulfillment = fulfillment;
+	}
 }

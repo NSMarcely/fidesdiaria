@@ -20,4 +20,14 @@ public class SaintRepositoryTxt implements SaintRepository{
 	public List<Saint> findAll(){
 		return new ArrayList<>(this.saints.values());
 	}
+	
+	@Override
+	public void read() {
+		
+	}
+	
+	@Override
+	public void write() {
+		
+	}
 }
