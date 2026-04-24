@@ -1,9 +1,14 @@
 # Compiled class file
 *.class
-
+bin/
+.idea
+.settings
+.classpath
+.project
 # Log file
 *.log
-
+prayer.txt
+user.txt
 # BlueJ files
 *.ctxt
 
